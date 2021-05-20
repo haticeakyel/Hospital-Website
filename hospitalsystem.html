@@ -9,7 +9,6 @@
             color: white;
         }
         #rightnavbar{
-    
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             top: 0;
@@ -20,16 +19,18 @@
         }
     
         .right-nav-link{
-            display: inline;
+            display:flex;
             margin: 0 1rem;
             font-size: 25px;
-            
+            float: right;      
+            flex-direction: row-reverse;      
         }
         .right-nav-link:hover{
             transform: translateY(8px);
         }
         .left-nav-link:hover{
             transform: translateY(8px);
+            color: white;
         }
         .left-nav-link a{
             line-height: 250%;
@@ -44,7 +45,7 @@
             border-color: rgba(0, 22, 22, 0.4);
             background-color:#be3144;
             border-top: #be3144;      
-            margin-top: 45px;
+            margin-top: 95px;
             padding-top: 10px;
             padding-bottom: 10px;
         }
@@ -79,8 +80,9 @@
 <body>
     <nav>
         <ul class="nav-list">
+            <li class="right-nav-link"><a href="signup.html">Sign Up</a></li>
         <li class="right-nav-link"><a href="signin.html">Sign In</a></li>
-        <li class="right-nav-link"><a href="signup.html">Sign Up</a></li>
+        
     </ul></nav>
     <div class="container">
         <div class="row">
