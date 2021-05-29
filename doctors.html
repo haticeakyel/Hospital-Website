@@ -4,28 +4,27 @@
 	<head>
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			
 			<style>
 			
 					body{
 						background-color: #303841;
 					}
-					
+					img{
+						width: 250px;
+						height: 300px;
+						margin-left: 20px;
+					}
 					.div1{
 						background-color: #be3144;
 						height: 400px;
+						width:100vh;
 					}
 					
 					.cardio{
 						color: white;
 						text-align: center;
 					}
-					
-					.img_cardio{
-						width: 250px;
-						height: 300px;
-						margin-left: 20px;
-					}
+				
 					
 					.paragraph1{
 						color: white;
@@ -49,11 +48,7 @@
 						text-align: center;
 					}
 					
-					.img_internal{
-						width: 250px;
-						height: 300px;
-						margin-left: 20px;
-					}
+					
 					
 					.paragraph2{
 						color: white;
@@ -72,11 +67,7 @@
 						text-align: center;
 					}
 					
-					.img_orto{
-						width: 250px;
-						height: 300px;
-						margin-left: 20px;
-					}
+				
 					
 					.paragraph3{
 						color: white;
@@ -94,17 +85,21 @@
 						color: white;
 						text-align: center;
 					}
-					
-					.img_neurology{
-						width: 250px;
-						height: 300px;
-						margin-left: 20px;
-					}
+				
 					
 					.paragraph4{
 						color: white;
 						margin-left: 40px;
 						font-size: 18px;
+					}
+					.container{
+						display: grid;
+					}
+					.left-half{
+						grid-column: 1;
+					}
+					.right-half{
+						grid-column: 2;
 					}
 					
 			</style>
@@ -112,31 +107,53 @@
 			<h1 class = "page_title"> DOCTORS </h1>
 	</head>
 	<body>
-		<div class = "div1">
+		<section class="container">
+		<div class = "left-half">
 			<h2 class = "cardio">Cardiology</h2>
 			<img src = "https://aawafi.com/uploads/partners/profile/doctor.jpg" alt = "Prof. Dr. Hatice Akyel" class = "img_cardio">
 			<p class ="paragraph1">Prof. Dr. Hatice Akyel</p>
 		</div>
-		
-		
-		<div class = "div2">
+		<div class="right-half">
+			<h1>Education</h1>
+			<ul>
+				<li>1989 - 1995: Istanbul University Medicine Faculty - Degree/Master Degree </li>
+				<li>1996 - 2001: Ege University Cardiology Institute - PhD</li>
+				<li>2006 - 2012: Istanbul University Medicine Faculty - Assoc. Prof.</li>
+				<li>2013 - 2015: Istanbul University Medicine Faculty - Professor</li>
+			</ul>
+			<h1>Course and Certificates</h1>
+			<ul>
+				<li>Core Valve Physician Certification</li>
+				<li>Edwards Transcatheter Heart Valve Training Program </li>
+				<li>Introduction Good  to Clinical Practice Vienna School OF Clinical Research</li>
+				<li>Pharmacovigilance and Medical Product Safety  Vienna School OF Clinical Research</li>
+			</ul>
+			<h1>Occupational Memberships</h1>
+			<ul>
+				<li>Turkish Society of Cardiology</li>
+				<li>European Society of Cardiology</li>
+				<li>European Association of Percutaneous Cardiovascular Intervention</li>
+				<li>TSC Association of Percutaneous Cardiovascular Intervention</li>
+			</ul>
+		</div>
+	
+		<div class = "div2 left-half">
 			<h2 class = "internal">Internal Medicine</h2>
 			<img src = "https://admin.doctors-365.de/Content/Doctors/ada6c780-7f6c-4cc0-ac99-3fdbb318bf71.jpg" alt = "Prof. Dr. Emir Demir" class = "img_internal">
 			<p class ="paragraph2">Prof. Dr. Emir Demir</p>
 		</div>
-		
-		<div class = "div3">
+	
+		<div class = "div3 left-half">
 			<h2 class = "ortopedi">Orthopedics</h2>
 			<img src = "https://www.ishafder.com/wp-content/uploads/2016/09/doctor-1.jpg" alt = "Prof. Dr. Furkan Veli Mart" class = "img_orto">
 			<p class ="paragraph3">Prof. Dr. Furkan Veli Mart</p>
 		</div>
-		
-		<div class = "div4">
+		<div class = "div4 left-half">
 			<h2 class = "neurology">Neurology</h2>
 			<img src = "https://d1pra95f92lrn3.cloudfront.net/media/thumb/2666_fit512.jpg" alt = "Prof. Dr. Ahmad Al Habbash" class = "img_neurology">
 			<p class ="paragraph4">Prof. Dr. Ahmad Al Habbash</p>
 		</div>
-		
+	</section>
 		
         
 	</body>
