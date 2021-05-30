@@ -34,7 +34,7 @@
         .left-nav-link a{
             line-height: 250%;
         }
-        #leftnavbar{
+        .leftnavbar{
             min-width: 290px;
             top: 550px;
             left: 0px;
@@ -47,6 +47,7 @@
             margin-top: 95px;
             padding-top: 10px;
             padding-bottom: 10px;
+            border-radius: 20px;
         }
         a{
             text-decoration: none;
@@ -62,11 +63,11 @@
         }
         h1{
             text-align: center;
-            padding-top: -25px;
             color: white;
-            font-size: 35px;
-            margin-top: 20px;
-            
+            font-size: 50px;
+            border-bottom-style: solid;
+            border-bottom-color: #be3144;
+            padding: 20px;
         }
         p{
             font-size: 18px;
@@ -79,8 +80,18 @@
             border-top-style: solid;
             border-top-color:#be3144;
         }
-        .contact h3{
-            padding-left: ;
+        .container{
+            display: grid;
+        }
+        .leftnavbar{
+            grid-column: 1;
+        }
+        #aboutus{
+            grid-column: 2;
+            padding-top:105px;
+            padding-left: 50px;
+            font-size: 20px;
+            line-height: 1.5rem;
         }
     </style>
     <meta charset="UTF-8">
@@ -88,42 +99,42 @@
     <title>Hospital System</title>
 </head>
 <body>
-    <h1>NEW AMSTERDAM</h1>
+    <h1>NEW AMSTERDAM HOSPITAL</h1>
+    
     <nav>
         <ul class="nav-list">
             <li class="right-nav-link"><a href="signup.html">Sign Up</a></li>
         <li class="right-nav-link"><a href="signin.html">Sign In</a></li>
         
     </ul></nav>
-    <div>
-        <div>
-          <div>
-            
-    <nav id="leftnavbar">
-        <ul class="nav-list">
-            <li class="left-nav-link"><a href="#aboutus">About Us</a></li>
-            <li class="left-nav-link"><a href="doctors.html">Doctors</a></li>
-            <li class="left-nav-link"><a href="covid19.html">Covid-19</a></li>
-            <li class="left-nav-link"><a href="institutesandepartments.html">Institutes & Departments</a></li>
-            <li class="left-nav-link"><a href="#contact">Contact</a></li>
-        </ul>
-        </nav>
-    
-    <main id="main-doc">
-        <section class="main-section" id="aboutus">
-        </div>
-        <div>
-            <h3>About Us</h3>
+    <section class="container">
+		<div class = "leftnavbar">
+			<ul class="nav-list">
+                <li class="left-nav-link"><a href="#aboutus">About Us</a></li>
+                <li class="left-nav-link"><a href="doctors.html">Doctors</a></li>
+                <li class="left-nav-link"><a href="covid19.html">Covid-19</a></li>
+                <li class="left-nav-link"><a href="institutesandepartments.html">Institutes & Departments</a></li>
+                <li class="left-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+		</div>
+		<div id="aboutus">
+			<h2>About Us</h2>
             <article><p>New Amsterdam has been the most prominent supporter of field and specialized hospitals that provide secondary health care services. New Amsterdam also supports various types of secondary health care facilities, including trauma and surgery hospitals,Covid -19, maternity and pediatrics hospitals, as well as public hospitals.</p>
             <p>Health services are offered by a specialized and trained medical staff to ensure quality provision of services and compliance with international protocols and standards. The medical team encompasses physicians, surgeons and resident staff of various specialties along with nurses, midwives, technicians (for laboratory, radiology, operations, sterilization, physical treatment, dialysis, optics, and anesthesia) and pharmacists in addition to service and administrative staff.</p>
         </article>
-        </section>
-    </main>
-</div>
-</div>
-</div>
-<section id="contact">
+		</div>
+	</section>
+   
+<section id="contact" class="contact-section">
+
+</section>
     <h3>Contact</h3>
+    <p>You can reach us...</p>
+    <div class="contact-links">
+        <a href="https://www.instagram.com/nbcnewamsterdam/" target="blank">Instagram</a>
+        <a href="https://www.netflix.com/tr/title/80241181" target="blank">Watch us on Netflix</a>
+        <a href></a>
+    </div>
 
 </section>
 </body>
