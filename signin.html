@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  
     <head>
       <style>
       body{
@@ -12,41 +12,57 @@
           width: 30%;
           margin-left: 35%;
           height: 50px;
+          margin-top: 50px;
         }
+        h1, .title-descr{
+          text-align: center;
+        }
+        input,label{
+          width: 90%;
+          height: 5%;
+          padding: 10px;
+          margin-top: 15px;
+          margin-left: 50px;
+          margin-right: 50px;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+      
+
       </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="container">
-        <header class="header">
-          <h1 id="title" class="text-center">Sign In Page</h1>
+    <div>
+        <header>
+          <h1 ">Sign In Page</h1>
           <title>Sign In</title>
-          <p id="description" class="description text-center">
+          <p class="title-descr">
             You can enter your account with filling the blanks
           </p>
         </header>
       </head>
       <body>
-        <div class="form-group">
-          <label id="id-number" for="id-number">Idenficiation Number</label>
+        <div>
+          <label id="id-number" for="id-number">Identification Number</label>
           <input type="id-number"
           name="id-number"
-          class="form-control"
+          
           placeholder="Please enter your Identification Number"
           required
           />
 
       </div>
-      <div class="form-group">
+      <div >
         <label id="password" for="password">Password</label>
         <input type="password"
         name="password"
-        class="form-control"
+        
         placeholder="Please enter your Password"
         required
         />
 
     </div>
-    <div class="form-group">
+    <div >
       <button type="submit" id="submit" class="submit-button">
         Submit
       </button>
