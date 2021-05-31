@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
@@ -14,58 +14,95 @@
           width: 30%;
           margin-left: 35%;
           height: 50px;
+          margin-top:100px;
+          margin-bottom: 100px;
         }
+        h1{
+          text-align: center;
+        }
+        input,.text-labels,p{
+          width: 90%;
+          height: 5%;
+          padding: 10px;
+          margin-top: 15px;
+          margin-left: 50px;
+          margin-right: 50px;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+        select{
+          margin-left: 60px;
+          min-height: 35px;
+          width: 20%;
+          border-radius: 10px;
+        }
+        textarea{
+          margin-left: 60px;
+          width:50%;
+          
+        }
+        #comments{
+          margin-left: 50px;
+          border-radius: 10px;
+          min-height: 75px;
+          
+        }
+        footer{
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            justify-content:space-around;
+            border-top-style: solid;
+            border-top-color:#be3144;
+        }
+      
       </style>
     </head>
-    <div class="container">
+    <div>
         <header class="header">
-          <h1 id="title" class="text-center"> Sign Up Page</h1>
+          <h1 id="title"> Sign Up Page</h1>
           <title>Sign Up </title>
         </header>
         <form id="survey-form">
-          <div class="form-group">
-            <label id="name-label" for="name">Name Surname</label>
+          <div>
+            <label class="text-labels" id="name-label" for="name">Name Surname</label>
             <input
               type="text"
               name="name"
               id="name"
-              class="form-control"
               placeholder="Please enter your Name and Surname"
               required
             />
           </div>
-          <div class="form-group">
-              <label id="id-number" for="id-number">Idenficiation Number</label>
+          <div>
+              <label class="text-labels" id="id-number" for="id-number">Idenficiation Number</label>
               <input type="id-number"
               name="id-number"
-              class="form-control"
               placeholder="Please enter your Identification Number"
               required
               />
 
           </div>
-          <div class="form-group">
-            <label id="email-label" for="email">Email</label>
+          <div>
+            <label class="text-labels" id="email-label" for="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
-              class="form-control"
               placeholder="Please enter your Email"
               required
             />
           </div>
-          <div class="form-group">
-            <label id="password" for="password">Password</label>
+          <div>
+            <label class="text-labels" id="password" for="password">Password</label>
             <input type="password"
             name="password"
-            class="form-control"
             placeholder="Please enter your Password"
             required
             />
-          <div class="form-group">
-            <label id="number-label" for="number"
-              >Age<span class="clue"></span></label
+          <div>
+            <label class="text-labels"id="number-label" for="number"
+              >Age</label
             >
             <input
               type="number"
@@ -73,66 +110,41 @@
               id="number"
               min="10"
               max="99"
-              class="form-control"
               placeholder="Age"
             />
           </div>
-          <div class="form-group">
+          <div>
             <p>What is your gender ?</p>
-            <select id="dropdown" name="role" class="form-control" required>
+            <select id="dropdown" name="role" required>
               <option disabled selected value>Please select one</option>
-              <option value="student">Female</option>
-              <option value="job">Male</option>
+              <option >Female</option>
+              <option>Male</option>
             </select>
           </div>
       
-          <div class="form-group">
-            <p>Where did you hear about our hospital from?</p>
-            <label>
-              <input
-                name="user-recommend"
-                value="billboards"
-                type="radio"
-                class="input-radio"
-                checked
-              />Billboards</label
-            >
-            <label>
-              <input
-                name="user-recommend"
-                value="friend"
-                type="radio"
-                class="input-radio"
-              />Friend</label
-            >
-      
-            <label
-              ><input
-                name="user-recommend"
-                value="internet"
-                type="radio"
-                class="input-radio"
-              />Internet</label
-            >
-            </div>
-    
-      
-          <div class="form-group">
+          <div >
+            <p>Where did you hear about us?</p>
+            <label for="bilboards"><input id="billboards" type="radio" name="from-where" value="billboards">Billboards</label>
+            <label for="friends"><input id="friends" type="radio" name="from-where" value="friends">Friends</label>
+            <label for="internet"><input id="internet" type="radio" name="from-where" value="internet">Internet</label>
+          <div>
             <p>Any comments or suggestions?</p>
             <textarea
               id="comments"
-              class="input-textarea"
               name="comment"
               placeholder="Enter your comment here..."
             ></textarea>
           </div>
       
-          <div class="form-group">
-            <button type="submit">
+          <div>
+            <button>
               Submit
             </button>
           </div>
         </form>
       </div>
-      
+      <footer>
+        <p>Made for Internet Programming SEN264</p>
+        <p>Copyright &copy; 2021. All rights reserved.</p>
+    </footer>    
 </html>
