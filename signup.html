@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
       <style>
+
         body{
             background-color: #303841;
             color: white;
+            font-size: 20px;
+        }
+        form{
+          margin-top: 70px;
         }
         button{
           background-color: #be3144;
@@ -20,7 +25,7 @@
         h1{
           text-align: center;
         }
-        input,.text-labels,p{
+        .inputbox,.text-labels,p{
           width: 90%;
           height: 5%;
           padding: 10px;
@@ -47,6 +52,9 @@
           min-height: 75px;
           
         }
+        .radiobuttons{
+          margin-left: 60px;
+        }
         footer{
             padding-left: 10px;
             padding-right: 10px;
@@ -66,7 +74,7 @@
         <form id="survey-form">
           <div>
             <label class="text-labels" id="name-label" for="name">Name Surname</label>
-            <input
+            <input class="inputbox"
               type="text"
               name="name"
               id="name"
@@ -76,7 +84,7 @@
           </div>
           <div>
               <label class="text-labels" id="id-number" for="id-number">Idenficiation Number</label>
-              <input type="id-number"
+              <input class="inputbox" type="id-number"
               name="id-number"
               placeholder="Please enter your Identification Number"
               required
@@ -85,7 +93,7 @@
           </div>
           <div>
             <label class="text-labels" id="email-label" for="email">Email</label>
-            <input
+            <input class="inputbox"
               type="email"
               name="email"
               id="email"
@@ -95,7 +103,7 @@
           </div>
           <div>
             <label class="text-labels" id="password" for="password">Password</label>
-            <input type="password"
+            <input class="inputbox" type="password"
             name="password"
             placeholder="Please enter your Password"
             required
@@ -104,7 +112,7 @@
             <label class="text-labels"id="number-label" for="number"
               >Age</label
             >
-            <input
+            <input class="inputbox"
               type="number"
               name="age"
               id="number"
@@ -124,9 +132,9 @@
       
           <div >
             <p>Where did you hear about us?</p>
-            <label for="bilboards"><input id="billboards" type="radio" name="from-where" value="billboards">Billboards</label>
-            <label for="friends"><input id="friends" type="radio" name="from-where" value="friends">Friends</label>
-            <label for="internet"><input id="internet" type="radio" name="from-where" value="internet">Internet</label>
+            <label for="bilboards"><input class="radiobuttons" id="billboards" type="radio" name="from-where" value="billboards" checked>Billboards</label>
+            <label for="friends"><input class="radiobuttons" id="friends" type="radio" name="from-where" value="friends">Friends</label>
+            <label for="internet"><input class="radiobuttons" id="internet" type="radio" name="from-where" value="internet">Internet</label>
           <div>
             <p>Any comments or suggestions?</p>
             <textarea
