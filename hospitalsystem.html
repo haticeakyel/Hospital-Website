@@ -93,9 +93,150 @@
         #aboutus h2{
           font-size: 40px;  
         }
+        .covid-link-section{
+            display: grid;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        .bbc{
+            grid-column: 1;
+            animation-name: bbc;
+            animation-iteration-count: infinite;
+            animation-duration: 5sn;
+        }
+        .bbc img{
+            width: 250px;
+            height: 250px;
+        }
+        @keyframes bbc{
+            0%{
+                grid-column: 1;
+            }
+            25%{
+                grid-column: 2;
+            }
+            50%{
+                grid-column: 3;
+            }
+            75%{
+                grid-column: 4;
+            }
+            100%{
+                grid-column: 5;
+            }
+        }
+        .nytimes{
+            grid-column: 2;
+            animation-name: nytimes;
+            animation-iteration-count: infinite;
+            animation-duration: 5sn;
+        }
+        .nytimes img{
+            width: 250px;
+            height: 250px;
+        }
+        @keyframes nytimes{
+            0%{
+                grid-column: 2;
+            }
+            25%{
+                grid-column: 3;
+            }
+            50%{
+                grid-column: 4;
+            }
+            75%{
+                grid-column: 5;
+            }
+            100%{
+                grid-column: 1;
+            }
+        }
+        .cnn{
+            grid-column: 3;
+            animation-name: cnn;
+            animation-iteration-count: infinite;
+            animation-duration: 5sn;
+        }
+        .cnn img{
+            width: 250px;
+            height: 250px;
+        }
+        @keyframes cnn{
+            0%{
+                grid-column: 3;
+            }
+            25%{
+                grid-column: 4;
+            }
+            50%{
+                grid-column: 5;
+            }
+            75%{
+                grid-column: 1;
+            }
+            100%{
+                grid-column: 2;
+            }
+        }
+        .dailymail{
+            grid-column: 4;
+            animation-name: dailymail;
+            animation-iteration-count: infinite;
+            animation-duration: 5sn;
+        }
+        .dailymail img{
+            width: 250px;
+            height: 250px;
+        }
+        @keyframes dailymail{
+            0%{
+                grid-column: 4;
+            }
+            25%{
+                grid-column: 5;
+            }
+            50%{
+                grid-column: 1;
+            }
+            75%{
+                grid-column: 2;
+            }
+            100%{
+                grid-column: 3;
+            }
+        }
+        .independent{
+            grid-column: 5;
+            animation-name: independent;
+            animation-iteration-count: infinite;
+            animation-duration: 5sn;
+        }
+        .independent img{
+            width: 250px;
+            height: 250px;
+        }
+        @keyframes independent{
+            0%{
+                grid-column: 5;
+            }
+            25%{
+                grid-column: 1;
+            }
+            50%{
+                grid-column: 2;
+            }
+            75%{
+                grid-column: 3;
+            }
+            100%{
+                grid-column: 4;
+            }
+        }
         .covid-section p{
             font-size: 30px;
             font-style: italic;
+            margin-top: 75px;
         }
         .contact-section,.covid-section{
             margin-left: 30px;
@@ -159,26 +300,32 @@
     </section>
 <section id="covid" class="covid-section">
     <h2>Covid 19</h2>
-    <p>Breaking News ABout Covid 19</p>
-    <article>
+    <p>Breaking News About Covid 19</p>
+    <section class="covid-link-section">
+    <article class="bbc">
       <a href="https://www.bbc.co.uk/search?q=covid+19" target="_blank"><img src="bbc.jpeg"></a>
-    <h3>BBC NEWS</h3>
+    
     </article>
-    <article>
-        <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank"><img src="nytimes.png"></a>
-        <h3>THE NEW YORK TIMES</h3>
+    <article class="nytimes">
+        <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank">
+            <img src="nytimes.png"></a>
+        
     </article>
-    <article>
-        <a href="https://edition.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/" target="_blank"><img src="cnn.png"></a>
-        <h3>CNN</h3>
+    <article class="cnn">
+        <a href="https://edition.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/" target="_blank">
+            <img src="cnn.png"></a>
+       
     </article>
-    <article>
-        <a href="https://www.dailymail.co.uk/news/coronavirus/index.html" target="_blank"><img src="dailymail.jpeg"></a>
-        <h3>DAILY MAIL ONLINE</h3>
+    <article class="dailymail">
+        <a href="https://www.dailymail.co.uk/news/coronavirus/index.html" target="_blank" >
+            <img src="dailymail.jpeg"></a>
+        
     </article>
-    <article><a href="https://www.independent.co.uk/topic/covid-19" target="_blank"><img src="independent.jpeg"></a></article>
+    <article  class="independent"><a href="https://www.independent.co.uk/topic/covid-19" target="_blank">
+        <img src="independent.jpeg"></a>
+    </article>
 </section>
-   
+</section>
 <section id="contact" class="contact-section">
     <h2>Contact</h2>
     <p>You can reach us...</p>
