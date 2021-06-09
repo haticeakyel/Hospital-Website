@@ -83,9 +83,10 @@
             />
           </div>
           <div>
-              <label class="text-labels" id="id-number" for="id-number">Idenficiation Number</label>
+              <label class="text-labels"  for="id-number">Identificiation Number</label>
               <input class="inputbox" type="id-number"
               name="id-number"
+              id="id-number"
               placeholder="Please enter your Identification Number"
               required
               />
@@ -102,16 +103,15 @@
             />
           </div>
           <div>
-            <label class="text-labels" id="password" for="password">Password</label>
+            <label class="text-labels"  for="password">Password</label>
             <input class="inputbox" type="password"
             name="password"
+            id="password"
             placeholder="Please enter your Password"
             required
             />
           <div>
-            <label class="text-labels"id="number-label" for="number"
-              >Age</label
-            >
+            <label class="text-labels"id="number-label" for="number">Age</label>
             <input class="inputbox"
               type="number"
               name="age"
@@ -145,7 +145,7 @@
           </div>
       
           <div>
-            <button>
+            <button id="submit-button">
               Submit
             </button>
           </div>
@@ -154,5 +154,44 @@
       <footer>
         <p>Made for Internet Programming SEN264</p>
         <p>Copyright &copy; 2021. All rights reserved.</p>
-    </footer>    
+    </footer>
+    <script >
+      var submitEl = document.getElementById('submit-button');
+      var nameEl = document.getElementById('name');
+      var emailEl = document.getElementById('email');
+      var passwordEl = document.getElementById('password');
+      var commentsEl = document.getElementById('comments');
+      var idNumberEl = document.getElementById('id-number');
+      var ageEl = document.getElementById('number');
+      var billboardsEl = document.getElementById('billboards');
+      var internetEl = document.getElementById('internet');
+      var friendsEl = document.getElementById('friends');
+      var dropdownEl = document.getElementById('dropdown');
+      var checkedValue = "";
+      submitEl.addEventListener('click', function(){
+
+        if(billboardsEl.checked == true){
+          checkedValue = billboardsEl.value;
+        }else if (internetEl.checked == true){
+          checkedValue = internetEl.value;
+        } else if (friendsEl.checked == true){
+          checkedValue = friendsEl.value;
+        }
+        var text = "Name :" +nameEl.value + "\n" + "Email : " + emailEl.value + "\n" + "Password :" + passwordEl.value + "\n" + "Comment :" + commentsEl.value + "\n" + "Id Number :" + idNumberEl.value + "\n" + "Age :" + ageEl.value + "\n" + "Hear About Us:" + checkedValue; 
+
+        var filename = "signUpInformations";
+
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+        
+           })
+    </script>
 </html>

@@ -52,8 +52,9 @@
       </head>
       <body>
         <div>
-          <label id="id-number" for="id-number">Identification Number</label>
+          <label  for="id-number">Identification Number</label>
           <input type="id-number"
+          id="id-number"
           name="id-number"
           placeholder="Please enter your Identification Number"
           required
@@ -64,6 +65,7 @@
         <label id="password" for="password">Password</label>
         <input type="password"
         name="password"
+        id="key-number"
         placeholder="Please enter your Password"
         required
         />
@@ -79,4 +81,19 @@
     <p>Made for Internet Programming SEN264</p>
     <p>Copyright &copy; 2021. All rights reserved.</p>
 </footer>
+<script>
+  var passwordEl = document.getElementById('key-number');
+  var idNumberEl = document.getElementById('id-number');
+  var submitEl = document.getElementById("submit");
+
+  submitEl.addEventListener('click', () => {
+    console.log("Password :" + passwordEl.value + "\n" + "IdNumber :" + idNumberEl.value);
+    response = {idNumber: 123123123, password: 123123123};
+    if(response.idNumber == idNumberEl.value && response.password == passwordEl.value){
+      console.log("Giriş Başarılı");
+    }else {
+      console.log("Giriş Başarısız.");
+    }
+  })
+</script>
 </html>
