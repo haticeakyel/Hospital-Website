@@ -77,7 +77,6 @@
         p{
             font-size: 18px;
         }
-        
         .container{
             display: grid;
         }
@@ -94,144 +93,57 @@
           font-size: 40px;  
         }
         .covid-link-section{
-            display: grid;
+            display: flex;
             margin-top: 100px;
             margin-bottom: 100px;
+            animation: carouselAnim 2s infinite;
+            width:auto;
         }
-        .bbc{
-            grid-column: 1;
-            animation-name: bbc;
-            animation-iteration-count: infinite;
-            animation-duration: 5sn;
+        .covid-link-section:hover{
+            animation-play-state: paused;
         }
+        @keyframes carouselAnim {
+                from {
+                    transform: translate(calc(100% - (5*250px)));
+                }
+                to {
+                    transform: translate(calc(-100% + (5*250px)));
+                }
+            }
+        .covidAnimation{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 300px;
+        
+        }
+        .covidAnimation:hover {
+        transform: scale(1.1);
+}
         .bbc img{
             width: 250px;
             height: 250px;
-        }
-        @keyframes bbc{
-            0%{
-                grid-column: 1;
-            }
-            25%{
-                grid-column: 2;
-            }
-            50%{
-                grid-column: 3;
-            }
-            75%{
-                grid-column: 4;
-            }
-            100%{
-                grid-column: 5;
-            }
-        }
-        .nytimes{
-            grid-column: 2;
-            animation-name: nytimes;
-            animation-iteration-count: infinite;
-            animation-duration: 5sn;
         }
         .nytimes img{
             width: 250px;
             height: 250px;
         }
-        @keyframes nytimes{
-            0%{
-                grid-column: 2;
-            }
-            25%{
-                grid-column: 3;
-            }
-            50%{
-                grid-column: 4;
-            }
-            75%{
-                grid-column: 5;
-            }
-            100%{
-                grid-column: 1;
-            }
-        }
-        .cnn{
-            grid-column: 3;
-            animation-name: cnn;
-            animation-iteration-count: infinite;
-            animation-duration: 5sn;
-        }
         .cnn img{
             width: 250px;
             height: 250px;
-        }
-        @keyframes cnn{
-            0%{
-                grid-column: 3;
-            }
-            25%{
-                grid-column: 4;
-            }
-            50%{
-                grid-column: 5;
-            }
-            75%{
-                grid-column: 1;
-            }
-            100%{
-                grid-column: 2;
-            }
-        }
-        .dailymail{
-            grid-column: 4;
-            animation-name: dailymail;
-            animation-iteration-count: infinite;
-            animation-duration: 5sn;
         }
         .dailymail img{
             width: 250px;
             height: 250px;
         }
-        @keyframes dailymail{
-            0%{
-                grid-column: 4;
-            }
-            25%{
-                grid-column: 5;
-            }
-            50%{
-                grid-column: 1;
-            }
-            75%{
-                grid-column: 2;
-            }
-            100%{
-                grid-column: 3;
-            }
-        }
-        .independent{
-            grid-column: 5;
-            animation-name: independent;
-            animation-iteration-count: infinite;
-            animation-duration: 5sn;
-        }
         .independent img{
             width: 250px;
             height: 250px;
         }
-        @keyframes independent{
-            0%{
-                grid-column: 5;
-            }
-            25%{
-                grid-column: 1;
-            }
-            50%{
-                grid-column: 2;
-            }
-            75%{
-                grid-column: 3;
-            }
-            100%{
-                grid-column: 4;
-            }
+        img{
+            padding: 17px;
+            border-radius: 15%;
         }
         .covid-section p{
             font-size: 30px;
@@ -302,26 +214,26 @@
     <h2>Covid 19</h2>
     <p>Breaking News About Covid 19</p>
     <section class="covid-link-section">
-    <article class="bbc">
+    <article class="bbc covidAnimation">
       <a href="https://www.bbc.co.uk/search?q=covid+19" target="_blank"><img src="bbc.jpeg"></a>
     
     </article>
-    <article class="nytimes">
+    <article class="nytimes covidAnimation">
         <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank">
             <img src="nytimes.png"></a>
         
     </article>
-    <article class="cnn">
+    <article class="cnn  covidAnimation">
         <a href="https://edition.cnn.com/interactive/2020/health/coronavirus-us-maps-and-cases/" target="_blank">
             <img src="cnn.png"></a>
        
     </article>
-    <article class="dailymail">
+    <article class="dailymail  covidAnimation">
         <a href="https://www.dailymail.co.uk/news/coronavirus/index.html" target="_blank" >
             <img src="dailymail.jpeg"></a>
         
     </article>
-    <article  class="independent"><a href="https://www.independent.co.uk/topic/covid-19" target="_blank">
+    <article  class="independent covidAnimation"><a href="https://www.independent.co.uk/topic/covid-19" target="_blank">
         <img src="independent.jpeg"></a>
     </article>
 </section>
