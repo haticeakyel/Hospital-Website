@@ -6,7 +6,6 @@
       body{
             background-color: #303841;
             color: white;
-            font-family: sans-serif;
         }
         button{
           background-color: #be3144;
@@ -52,7 +51,6 @@
         </header>
       </head>
       <body>
-        <form>
         <div>
           <label  for="id-number">Identification Number</label>
           <input type="id-number"
@@ -78,25 +76,25 @@
         Submit
       </button>
     </div>
-  </form>
+    <script>
+      var passwordEl = document.getElementById('key-number');
+      var idNumberEl = document.getElementById('id-number');
+      var submitEl = document.getElementById("submit");
+    
+      submitEl.addEventListener('click', () => {
+        console.log("Password :" + passwordEl.value + "\n" + "IdNumber :" + idNumberEl.value);
+        response = {idNumber: 123123123, password: 123123123};
+        if(response.idNumber == idNumberEl.value && response.password == passwordEl.value){
+          console.log("Giriş Başarılı");
+        }else {
+          console.log("Giriş Başarısız.");
+        }
+      })
+    </script>
   </body> 
   <footer>
     <p>Made for Internet Programming SEN264</p>
     <p>Copyright &copy; 2021. All rights reserved.</p>
 </footer>
-<script>
-  var passwordEl = document.getElementById('key-number');
-  var idNumberEl = document.getElementById('id-number');
-  var submitEl = document.getElementById("submit");
 
-  submitEl.addEventListener('click', () => {
-    console.log("Password :" + passwordEl.value + "\n" + "IdNumber :" + idNumberEl.value);
-    response = {idNumber: 123123123, password: 123123123};
-    if(response.idNumber == idNumberEl.value && response.password == passwordEl.value){
-      console.log("Giriş Başarılı");
-    }else {
-      console.log("Giriş Başarısız.");
-    }
-  })
-</script>
 </html>
