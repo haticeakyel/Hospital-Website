@@ -179,13 +179,13 @@
         } else if (friendsEl.checked == true){
           checkedValue = friendsEl.value;
         }
-        // var text = "Name :" +nameEl.value + "\n" + "Email : " + emailEl.value + "\n" + "Password :" + passwordEl.value + "\n" + "Comment :" + commentsEl.value + "\n" + "Id Number :" + idNumberEl.value + "\n" + "Age :" + ageEl.value + "\n" + "Hear About Us:" + checkedValue; 
+        var text = "Name :" +nameEl.value + "\n" + "Email : " + emailEl.value + "\n" + "Password :" + passwordEl.value + "\n" + "Comment :" + commentsEl.value + "\n" + "Id Number :" + idNumberEl.value + "\n" + "Age :" + ageEl.value + "\n" + "Hear About Us:" + checkedValue; 
 
-        // var filename = "signUpInformations";
+        var filename = "signUpInformations";
 
-        // var element = document.createElement('a');
-        // element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-        // element.setAttribute('download', filename);
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
 
         element.style.display = 'none';
         document.body.appendChild(element);
