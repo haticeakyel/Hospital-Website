@@ -78,21 +78,6 @@
       </button>
     </div>
     </form>
-    <script>
-      var passwordEl = document.getElementById('key-number');
-      var idNumberEl = document.getElementById('id-number');
-      var submitEl = document.getElementById("submit");
-    
-      submitEl.addEventListener('click', () => {
-        console.log("Password :" + passwordEl.value + "\n" + "IdNumber :" + idNumberEl.value);
-        response = {idNumber: 123123123, password: 123123123};
-        if(response.idNumber == idNumberEl.value && response.password == passwordEl.value){
-          console.log("Giriş Başarılı");
-        }else {
-          console.log("Giriş Başarısız.");
-        }
-      })
-    </script>
   </body> 
   <footer>
     <p>Made for Internet Programming SEN264</p>
